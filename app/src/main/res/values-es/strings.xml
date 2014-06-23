@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timesheet</string>
+    <string-array name="activity_type_array">
+        <item>Oficina</item>
+        <item>Capacitación</item>
+        <item>Vacaciones</item>
+        <item>Ingeniería</item>
+        <item>Viaje</item>
+        <item>Campo</item>
+    </string-array>
+    <string name="action_logout">Cerrar Sesión</string>
+</resources>

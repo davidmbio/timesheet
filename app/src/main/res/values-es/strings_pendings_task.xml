@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kill_as_office">Llenar como oficina</string>
+    <string name="kill_as_vacation">Llenar como vacaciones</string>
+    <string name="kill_as_training">Llenar como viaje</string>
+</resources>
