@@ -2,11 +2,126 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lv_content_activitys_type"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_content_activities_type"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout"
+            android:textAlignment="center"
+            android:layout_below="@+id/lv_content_activities_type"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:stretchColumns="1"
+            android:background="@color/table_background">
+
+            <TableRow
+                android:id="@+id/tr_header_activity"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:background="@color/header_table_background"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_activity"
+                    android:layout_column="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hour_time_activity"
+                    android:layout_column="2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/over_time_activity"
+                    android:layout_column="3"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/double_time_activity"
+                    android:layout_column="4"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_proposal"
+                    android:layout_column="5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_activity"
+                    android:layout_column="6"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_content_activity"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/content_table_background">
+                <TextView
+                    android:id="@+id/tv_types_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EXAMPLE"
+                    android:layout_column="1"/>
+                <TextView
+                    android:id="@+id/tv_hour_types_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_column="2"/>
+                <TextView
+                    android:id="@+id/tv_over_time_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_column="3"/>
+                <TextView
+                    android:id="@+id/tv_double_time_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_column="4"/>
+                <TextView
+                    android:id="@+id/tv_service_proposal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_column="5"/>
+                <ImageButton
+                    android:id="@+id/ibEditAcction"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_action_dayli_task"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/hola_mundo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_current_day"
+                android:text="hello world"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 </FrameLayout>

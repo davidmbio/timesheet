@@ -1,13 +1,20 @@
 package com.komodo.timesheet;
 
 import android.support.v4.app.Fragment;
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -22,7 +29,7 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
     public static final int DETAILED_ACCESS_OFFICE = 6;
     public static final int DETAILED_ACCESS_TRAINING = 7;
     public static final int DETAILED_ACCESS_VACATION = 8;
-    public static final int DETAILED_ACCESS_ENGINNERING = 9;
+    public static final int DETAILED_ACCESS_ENGINEERING = 9;
     public static final int DETAILED_ACCESS_TRAVEL = 10;
     public static final int DETAILED_ACCESS_FIELD = 11;
 
@@ -33,16 +40,23 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        TextView tvCurrentDay;
         View rootView = inflater.inflate(R.layout.activity_dayli_task, container, false);
 
         String[] types = getResources().getStringArray(R.array.activity_type_array);
         activityTypes = new ArrayList<String>();
 
+        Date date = new Date();
+
+        tvCurrentDay = (TextView)rootView.findViewById(R.id.tv_current_day);
+        tvCurrentDay.setText(date.toString());
+
         for(int i=0; i<types.length; i++){
             activityTypes.add(types[i]);
         }
 
-        activityTypeList = (ListView)rootView.findViewById(R.id.lv_content_activitys_type);
+        activityTypeList = (ListView)rootView.findViewById(R.id.lv_content_activities_type);
         TypesAdapter adapter = new TypesAdapter(this, activityTypes);
         activityTypeList.setAdapter(adapter);
 
@@ -74,7 +88,7 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
                 Toast.makeText(getActivity(),"Acceso detallado vacaciones",Toast.LENGTH_LONG).show();
                 break;
 
-            case DETAILED_ACCESS_ENGINNERING:
+            case DETAILED_ACCESS_ENGINEERING:
                 Toast.makeText(getActivity(),"Acceso detallado ingenieria",Toast.LENGTH_LONG).show();
                 break;
 

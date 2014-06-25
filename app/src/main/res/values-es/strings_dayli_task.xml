@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_type_array">
+        <item>Officina</item>
+        <item>Entrenamiento</item>
+        <item>Vacaciones</item>
+        <item>Ingenieria</item>
+        <item>Viaje</item>
+        <item>Campo</item>
+    </string-array>
+
+    <string name="tab_dayli_task">Actividad Diaria</string>
+    <string name="tab_pendings_task">Pendientes</string>
+    <string name="type_activity">Tipos</string>
+    <string name="hour_time_activity">ST</string>
+    <string name="over_time_activity">OV</string>
+    <string name="double_time_activity">DT</string>
+    <string name="service_proposal">SP</string>
+    <string name="action_activity">Accion</string>
+</resources>

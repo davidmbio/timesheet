@@ -2,6 +2,7 @@ package com.komodo.timesheet;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,14 +17,16 @@ import android.widget.Toast;
  * Created by david on 18/06/14.
  */
 public class HomeActivity extends FragmentActivity implements ActionBar.TabListener {
+
     AppSectionsPagerAdapter mAppSectionsPagerAdapter;
     ViewPager mViewPager;
+    final int[] tabIcons = new int[]{R.drawable.ic_action_dayli_task, R.drawable.ic_action_pending_task};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
+        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), this);
 
         final ActionBar actionBar = getActionBar();
         actionBar.setHomeButtonEnabled(false);
@@ -39,10 +42,9 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
         });
 
         for (int i = 0; i < mAppSectionsPagerAdapter.getCount(); i++) {
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText(mAppSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this));
+            actionBar.addTab(actionBar.newTab().setText(mAppSectionsPagerAdapter.getPageTitle(i))
+                    .setIcon(getResources().getDrawable(tabIcons[i]))
+                    .setTabListener(this));
         }
     }
 
@@ -60,8 +62,10 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
     }
 
     public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
-        public AppSectionsPagerAdapter(FragmentManager fm) {
+        Context context;
+        public AppSectionsPagerAdapter(FragmentManager fm, Context context) {
             super(fm);
+            this.context = context;
         }
 
         @Override
@@ -70,7 +74,7 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
                 case 0:
                     return new DayliTaskFragment();
                 default:
-                    return new PendingsTaskActivity();
+                    return new PendingsTaskFragment();
             }
         }
 
@@ -81,7 +85,7 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return position == 0 ? "Dayli Task" : "Pendings";
+            return position == 0 ? context.getResources().getString(R.string.tab_dayli_task) : context.getResources().getString(R.string.tab_pendings_task);
         }
     }
 
@@ -95,7 +99,7 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_notification:
-                    new PendingsTaskActivity();
+                    new PendingsTaskFragment();
                 break;
             case R.id.action_today:
                 Toast.makeText(getApplicationContext(), "te lleva al dia actual", Toast.LENGTH_SHORT).show();

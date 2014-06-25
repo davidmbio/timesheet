@@ -2,13 +2,5 @@
 <resources>
     <string name="app_name">Timesheet</string>
     <string name="action_settings">Setting</string>
-    <string-array name="activity_type_array">
-        <item>Office</item>
-        <item>Training</item>
-        <item>Vacation</item>
-        <item>Engineering</item>
-        <item>Travel</item>
-        <item>Field</item>
-    </string-array>
     <string name="action_logout">Logout</string>
 </resources>

@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.komodo.timesheet.PendingsTaskActivity" >
+    tools:context="com.komodo.timesheet.PendingsTaskFragment" >
     <item android:id="@+id/action_settings"
         android:title="@string/kill_as_office"
         android:orderInCategory="100"
