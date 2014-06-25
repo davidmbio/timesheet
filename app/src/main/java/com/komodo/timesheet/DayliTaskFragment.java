@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.text.DateFormat;
@@ -37,6 +38,7 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
 
     private ListView activityTypeList;
     private ArrayList<String> activityTypes;
+    private ImageButton ibAccionEdit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
         activityTypes = new ArrayList<String>();
 
         Date date = new Date();
+
+        ibAccionEdit = (ImageButton)rootView.findViewById(R.id.ibEditAction);
+        ibAccionEdit.setOnClickListener(this);
 
         tvCurrentDay = (TextView)rootView.findViewById(R.id.tv_current_day);
         tvCurrentDay.setText(date.toString());
@@ -103,6 +108,10 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
             default:
                 System.out.println("hello world!");
                 break;
+        }
+
+        if(view.getId()==R.id.ibEditAction){
+
         }
     }
 }

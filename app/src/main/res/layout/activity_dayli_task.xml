@@ -32,32 +32,38 @@
                 android:background="@color/header_table_background"
                 android:layout_margin="1dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:text="@string/type_activity"
                     android:layout_column="1"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/hour_time_activity"
                     android:layout_column="2"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/over_time_activity"
                     android:layout_column="3"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/double_time_activity"
                     android:layout_column="4"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/service_proposal"
                     android:layout_column="5"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/action_activity"
                     android:layout_column="6"/>
@@ -73,38 +79,44 @@
                 android:background="@color/content_table_background">
                 <TextView
                     android:id="@+id/tv_types_activity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:text="EXAMPLE"
                     android:layout_column="1"/>
                 <TextView
                     android:id="@+id/tv_hour_types_activity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:layout_column="2"/>
                 <TextView
                     android:id="@+id/tv_over_time_activity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:layout_column="3"/>
                 <TextView
                     android:id="@+id/tv_double_time_activity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:layout_column="4"/>
+                    android:layout_column="4" />
                 <TextView
                     android:id="@+id/tv_service_proposal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:layout_column="5"/>
                 <ImageButton
-                    android:id="@+id/ibEditAcction"
+                    android:id="@+id/ibEditAction"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:src="@drawable/ic_action_dayli_task"/>
 
             </TableRow>
