@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="activity_type_array">
-        <item>Office</item>
-        <item>Training</item>
-        <item>Vacation</item>
-        <item>Engineering</item>
-        <item>Travel</item>
-        <item>Field</item>
-    </string-array>
+    <string name="office_title">Office</string>
+    <string name="training_title">Training</string>
+    <string name="vacation_title">Vacation</string>
+    <string name="engineering_title">Engineering</string>
+    <string name="travel_title">Travel</string>
+    <string name="field_title">Field</string>\
 
     <string name="tab_dayli_task">Dayli Task</string>
     <string name="tab_pendings_task">Pendings</string>
+
     <string name="type_activity">Type</string>
     <string name="hour_time_activity">ST</string>
     <string name="over_time_activity">OV</string>

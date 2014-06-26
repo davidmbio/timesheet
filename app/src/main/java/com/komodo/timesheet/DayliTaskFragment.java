@@ -1,16 +1,12 @@
 package com.komodo.timesheet;
 
 import android.support.v4.app.Fragment;
-import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -33,8 +29,6 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
     public static final int DETAILED_ACCESS_ENGINEERING = 9;
     public static final int DETAILED_ACCESS_TRAVEL = 10;
     public static final int DETAILED_ACCESS_FIELD = 11;
-
-
 
     private ListView activityTypeList;
     private ArrayList<String> activityTypes;
@@ -74,44 +68,38 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
         switch (option){
             case QUICK_ACCESS_OFFICE:
                 Toast.makeText(getActivity(),"Acceso rapido oficina",Toast.LENGTH_LONG).show();
-                break;
-
+            break;
             case QUICK_ACCESS_TRAINING:
                 Toast.makeText(getActivity(),"Acceso rapido viaje",Toast.LENGTH_LONG).show();
-                break;
+            break;
             case QUICK_ACCESS_VACATION:
                 Toast.makeText(getActivity(),"Acceso rapido vacaciones",Toast.LENGTH_LONG).show();
-                break;
+            break;
             case DETAILED_ACCESS_OFFICE:
-                Toast.makeText(getActivity(),"Acceso detallado oficina",Toast.LENGTH_LONG).show();
-                break;
+                new ActivitiesDialog(getActivity(), R.string.office_title );
+            break;
             case DETAILED_ACCESS_TRAINING:
-                Toast.makeText(getActivity(),"Acceso detallado capacitacion",Toast.LENGTH_LONG).show();
-                break;
-
+                new ActivitiesDialog(getActivity(), R.string.training_title);
+            break;
             case DETAILED_ACCESS_VACATION:
-                Toast.makeText(getActivity(),"Acceso detallado vacaciones",Toast.LENGTH_LONG).show();
-                break;
-
+                new ActivitiesDialog(getActivity(),R.string.training_title);
+            break;
             case DETAILED_ACCESS_ENGINEERING:
-                Toast.makeText(getActivity(),"Acceso detallado ingenieria",Toast.LENGTH_LONG).show();
-                break;
-
+                new ActivitiesDialog(getActivity(),R.string.training_title);
+            break;
             case DETAILED_ACCESS_TRAVEL:
-                Toast.makeText(getActivity(),"Acceso detallado viaje",Toast.LENGTH_LONG).show();
-                break;
-
+                new ActivitiesDialog(getActivity(),R.string.training_title);
+            break;
             case DETAILED_ACCESS_FIELD:
-                Toast.makeText(getActivity(),"Acceso detallado campo",Toast.LENGTH_LONG).show();
-                break;
-
+                new ActivitiesDialog(getActivity(),R.string.training_title);
+            break;
             default:
                 System.out.println("hello world!");
-                break;
+            break;
         }
 
         if(view.getId()==R.id.ibEditAction){
-
+            Toast.makeText(getActivity(),"hello world",Toast.LENGTH_LONG).show();
         }
     }
 }

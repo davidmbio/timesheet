@@ -23,7 +23,7 @@ public class TypesAdapter extends BaseAdapter {
 
     public static class ViewHolder{
         TextView tvTypeName;
-        ImageButton ibQuickAcces;
+        ImageButton ibQuickAccess;
         ImageButton ibDetailAccess;
     }
 
@@ -60,10 +60,10 @@ public class TypesAdapter extends BaseAdapter {
             holder= new ViewHolder();
 
             holder.tvTypeName = (TextView)view.findViewById(R.id.tv_activity_type);
-            holder.ibQuickAcces = (ImageButton)view.findViewById(R.id.ibQuickAcces);
+            holder.ibQuickAccess = (ImageButton)view.findViewById(R.id.ibQuickAcces);
             holder.ibDetailAccess = (ImageButton)view.findViewById(R.id.ibDetailAccess);
             if(position >= 3 ) {
-                ((ViewGroup) view).removeView(holder.ibQuickAcces);
+                ((ViewGroup) view).removeView(holder.ibQuickAccess);
             }
             view.setTag(holder);
         }else {
@@ -73,12 +73,12 @@ public class TypesAdapter extends BaseAdapter {
         holder.tvTypeName.setText(activityTypes.get(position));
 
         if(position < 3){
-            holder.ibQuickAcces.setImageResource(R.drawable.ic_action_quick_access);
-            holder.ibQuickAcces.setOnClickListener((View.OnClickListener)dayliTaskFragment);
-            holder.ibQuickAcces.setTag(position);
+            holder.ibQuickAccess.setImageResource(R.drawable.ic_action_quick_access);
+            holder.ibQuickAccess.setOnClickListener((View.OnClickListener) dayliTaskFragment);
+            holder.ibQuickAccess.setTag(position);
         }
 
-        holder.ibDetailAccess.setImageResource(R.drawable.ic_action_detail_task);
+        holder.ibDetailAccess.setImageResource(R.drawable.ic_action_detail_access);
         holder.ibDetailAccess.setOnClickListener((View.OnClickListener)dayliTaskFragment);
         holder.ibDetailAccess.setTag(position+6);
 

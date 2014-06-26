@@ -3,4 +3,8 @@
     <string name="app_name">Timesheet</string>
     <string name="action_settings">Configuracion</string>
     <string name="action_logout">Cerrar Sesión</string>
+
+    <!-- home strings -->
+    <string name="action_today">Dia actual</string>
+    <string name="action_notification">Notificación</string>
 </resources>
