@@ -14,6 +14,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.komodo.timesheet.rest.RestClient;
+
+import org.json.JSONArray;
+
 /**
  * Created by david on 18/06/14.
  */
@@ -33,6 +37,8 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
     private ListView activityTypeList;
     private ArrayList<String> activityTypes;
     private ImageButton ibAccionEdit;
+    RestClient restClient;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +48,10 @@ public class DayliTaskFragment extends Fragment implements View.OnClickListener 
 
         String[] types = getResources().getStringArray(R.array.activity_type_array);
         activityTypes = new ArrayList<String>();
+
+        restClient =  new RestClient();
+        JSONArray jsonArray =restClient.getAsArray("http://192.168.20.18/app.php/timesheet/rest/getusers","david","example");
+        System.out.println(jsonArray.toString());
 
         Date date = new Date();
 

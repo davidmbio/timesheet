@@ -6,7 +6,6 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ public class ActivitiesDialog implements DialogInterface.OnClickListener, SeekBa
     AlertDialog alertDialog;
     Context context;
     int title, progress = 0;;
-
     SeekBar seekBar;
     TextView textView;
 
@@ -37,7 +35,7 @@ public class ActivitiesDialog implements DialogInterface.OnClickListener, SeekBa
         seekBar = (SeekBar)dialogView.findViewById(R.id.sbHoras);
         textView = (TextView)dialogView.findViewById(R.id.tvHoras);
 
-        textView.setText(seekBar.getProgress() + " Horas");
+        textView.setText(seekBar.getProgress() + " H");
 
         Builder builder = new Builder(context);
         builder.setTitle(title)
@@ -77,6 +75,6 @@ public class ActivitiesDialog implements DialogInterface.OnClickListener, SeekBa
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        textView.setText(progress + "Horas");
+        textView.setText(progress + " H");
     }
 }

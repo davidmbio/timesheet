@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.komodo.timesheet.rest.RestClient;
+
 /**
  * Created by david on 18/06/14.
  */
